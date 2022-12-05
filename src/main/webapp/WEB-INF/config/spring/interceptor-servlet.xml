@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xsi:schemaLocation="
@@ -20,13 +19,7 @@
 	<mvc:resources location="/asset/base/plugins/" mapping="/plugins/**" />
 	<mvc:resources location="/asset/base/fonts/" mapping="/fonts/**" />
 	<mvc:resources location="/asset/base/agree/" mapping="/agree/**" />
-	<mvc:resources location="/asset/adm/css/" mapping="/adm/css/**" />
-	<mvc:resources location="/asset/adm/js/" mapping="/adm/js/**" />
-	<mvc:resources location="/asset/adm/images/" mapping="/adm/images/**" />
-	<mvc:resources location="/asset/adm/plugins/" mapping="/adm/plugins/**" />
-	<mvc:resources location="/asset/adm/fonts/" mapping="/adm/fonts/**" />
-	<mvc:resources location="/asset/adm/agree/" mapping="/adm/agree/**" />
-    
+
     <!-- URL 경로별로 인터셉터 처리할 부분에 대한 설정 -->
 	<mvc:interceptors>
 		
@@ -38,12 +31,7 @@
            	<mvc:exclude-mapping path="/images/**" />
            	<mvc:exclude-mapping path="/plugins/**" />
            	<mvc:exclude-mapping path="/fonts/**" />
-           	<mvc:exclude-mapping path="/adm/css/**" />
-           	<mvc:exclude-mapping path="/adm/js/**" />
-           	<mvc:exclude-mapping path="/adm/images/**" />
-           	<mvc:exclude-mapping path="/adm/plugins/**" />
-           	<mvc:exclude-mapping path="/adm/fonts/**" />
-           	<bean class="com.mc.springxml.utils.AuthCheckInterceptor" />
+           	<bean class="com.mc.miraclecat.utils.AuthCheckInterceptor" />
    		</mvc:interceptor>
     </mvc:interceptors>
      

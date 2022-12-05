@@ -26,7 +26,7 @@
     </bean>
      
     <!-- MessageSource를 사용하기위한 MessageUtils 매핑 -->
-    <bean id="message" class="com.mc.springxml.utils.MessageUtil">
+    <bean id="message" class="com.mc.miraclecat.utils.MessageUtil">
         <property name="messageSourceAccessor" ref="messageSourceAccessor"/>
     </bean>
 	

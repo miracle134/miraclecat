@@ -11,7 +11,7 @@
         <property name="dataSource" ref="dataSource" />
 
         <!-- JPA @Entity 탐색 범위 -->
-        <property name="packagesToScan" value="com.mc.springxml.model.entity" />
+        <property name="packagesToScan" value="com.mc.miraclecat.model.entity" />
 
         <!-- Hibernate 구현체 사용 -->
         <property name="jpaVendorAdapter">
@@ -33,7 +33,7 @@
     </bean>
 
     <!-- JPA @Repository 탐색 범위-->
-    <jpa:repositories base-package="com.mc.springxml.model.repository"/>
+    <jpa:repositories base-package="com.mc.miraclecat.model.repository"/>
 
     <!-- JPA 예외를 스프링 예외로 변환 -->
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />

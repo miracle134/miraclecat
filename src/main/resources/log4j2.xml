@@ -39,7 +39,7 @@
 		<Logger name="jdbc.resultsettable" level="INFO" additivity="false">
 			<appender-ref ref="console" />
 		</Logger>
-		<Logger name="com.mc.springxml" level="DEBUG" additivity="false">
+		<Logger name="com.mc.miraclecat" level="DEBUG" additivity="false">
 			<appender-ref ref="console" />
 		</Logger>
 		<Logger name="errorLog" level="ERROR" additivity="false">

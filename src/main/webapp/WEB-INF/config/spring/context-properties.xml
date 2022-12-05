@@ -10,7 +10,7 @@
    		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
 	<!-- 프로퍼티 Util Inject -->
-	<bean id="propertiesUtil" class="com.mc.springxml.utils.PropertiesUtil">
+	<bean id="propertiesUtil" class="com.mc.miraclecat.utils.PropertiesUtil">
  		<property name="locations" value="classpath:/properties/${server.type}/*.properties" />
  		<property name="fileEncoding" value="UTF-8" /> 
 	</bean>

@@ -2,48 +2,47 @@
 <!--
     - DispatcherServlet application context for Application's web tier.
 -->
-<beans xmlns="http://www.springframework.org/schema/beans" 
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:p="http://www.springframework.org/schema/p" 
-        xmlns:context="http://www.springframework.org/schema/context"
-        xmlns:aop="http://www.springframework.org/schema/aop"
-        xmlns:beans="http://www.springframework.org/schema/beans"
-        xsi:schemaLocation="
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:beans="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="
 	       	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 	       	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
-       						
+
     <!-- @Resource 어노테이션 사용을 위한 설정 (Framework에 종속적인 어플리케이션을 구성하지 않기 위해서 @Resource를 사용) -->
-    <context:annotation-config/>	
-	
-	<!-- @Aspect 어노테이션이 적용된 빈을 Aspect로 사용할 수 있게 설정 -->
-	<aop:aspectj-autoproxy/>
-	
-	<!--
-		어노테이션 기반으로 클래스를 빈으로 등록하도록 세팅한다
+    <context:annotation-config/>
+
+    <!-- @Aspect 어노테이션이 적용된 빈을 Aspect로 사용할 수 있게 설정 -->
+    <aop:aspectj-autoproxy/>
+
+    <!--
+        어노테이션 기반으로 클래스를 빈으로 등록하도록 세팅한다
         Auto Detect를 위한 MVC 설정
     -->
-    <context:component-scan base-package="com.mc.springxml, com.miraclecat.second" />
+    <context:component-scan base-package="com.mc.miraclecat"/>
 
-	<!-- Tiles3 -->
-	<bean id="tilesViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-		<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
-		<property name="order" value="1" />
-	</bean>
-	    
+    <!-- Tiles3 -->
+    <bean id="tilesViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView"/>
+        <property name="order" value="1"/>
+    </bean>
+
     <!-- Controller to JSP resources in the /WEB-INF/jsp/views directory -->
-	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<beans:property name="prefix" value="/WEB-INF/jsp/views/" />
-		<beans:property name="suffix" value=".jsp" />
-		<beans:property name="order" value="2"/>
-	</beans:bean>
+    <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <beans:property name="prefix" value="/WEB-INF/jsp/views/"/>
+        <beans:property name="suffix" value=".jsp"/>
+        <beans:property name="order" value="2"/>
+    </beans:bean>
 
-	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
-		<property name="definitions">
-			<list>
-				<value>classpath:/config/tiles-config.xml</value>
-			</list>
-		</property>
-	</bean>		
+    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>classpath:/config/tiles-config.xml</value>
+            </list>
+        </property>
+    </bean>
 
 </beans>

@@ -29,7 +29,7 @@
     </filter-mapping>
     <filter>
         <filter-name>XSS</filter-name>
-        <filter-class>com.mc.springxml.utils.CrossScriptingAndSessionFilter</filter-class>
+        <filter-class>com.mc.miraclecat.utils.CrossScriptingAndSessionFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>XSS</filter-name>
