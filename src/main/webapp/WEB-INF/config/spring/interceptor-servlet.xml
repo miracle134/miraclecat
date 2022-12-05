@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+   		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+     
+    <!-- Spring-MVC -->
+    <mvc:annotation-driven />     
+     
+   	<!-- 
+    	Handles HTTP GET requests for /XXX/** by efficiently serving up static resources in the ${webappRoot}/XXX directory 
+      	web.xml에서 url-pattern이 [/]으로 세팅되었을 경우 Css, js, images 파일 등 정적인 리소스 파일들은 별도로 mapping 정보를 세팅하여 관리한다.
+	-->
+	<mvc:resources location="/asset/base/css/" mapping="/css/**" />
+	<mvc:resources location="/asset/base/js/" mapping="/js/**" />
+	<mvc:resources location="/asset/base/images/" mapping="/images/**" />
+	<mvc:resources location="/asset/base/plugins/" mapping="/plugins/**" />
+	<mvc:resources location="/asset/base/fonts/" mapping="/fonts/**" />
+	<mvc:resources location="/asset/base/agree/" mapping="/agree/**" />
+	<mvc:resources location="/asset/adm/css/" mapping="/adm/css/**" />
+	<mvc:resources location="/asset/adm/js/" mapping="/adm/js/**" />
+	<mvc:resources location="/asset/adm/images/" mapping="/adm/images/**" />
+	<mvc:resources location="/asset/adm/plugins/" mapping="/adm/plugins/**" />
+	<mvc:resources location="/asset/adm/fonts/" mapping="/adm/fonts/**" />
+	<mvc:resources location="/asset/adm/agree/" mapping="/adm/agree/**" />
+    
+    <!-- URL 경로별로 인터셉터 처리할 부분에 대한 설정 -->
+	<mvc:interceptors>
+		
+		<!-- Default Interceptor -->
+        <mvc:interceptor>
+       		<mvc:mapping path="/**" />
+           	<mvc:exclude-mapping path="/css/**" />
+           	<mvc:exclude-mapping path="/js/**" />
+           	<mvc:exclude-mapping path="/images/**" />
+           	<mvc:exclude-mapping path="/plugins/**" />
+           	<mvc:exclude-mapping path="/fonts/**" />
+           	<mvc:exclude-mapping path="/adm/css/**" />
+           	<mvc:exclude-mapping path="/adm/js/**" />
+           	<mvc:exclude-mapping path="/adm/images/**" />
+           	<mvc:exclude-mapping path="/adm/plugins/**" />
+           	<mvc:exclude-mapping path="/adm/fonts/**" />
+           	<bean class="com.mc.springxml.utils.AuthCheckInterceptor" />
+   		</mvc:interceptor>
+    </mvc:interceptors>
+     
+</beans>

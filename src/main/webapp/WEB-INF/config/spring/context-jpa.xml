@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+    <!-- JPA 설정 EntityManagerFactory -->
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+
+        <!-- JPA @Entity 탐색 범위 -->
+        <property name="packagesToScan" value="com.mc.springxml.model.entity" />
+
+        <!-- Hibernate 구현체 사용 -->
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+        </property>
+
+        <!-- Hibernate 상세 설정 -->
+        <property name="jpaProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</prop>
+                <prop key="hibernate.jdbc.time_zone">Asia/Seoul</prop> <!-- 시간대 설정 -->
+                <prop key="hibernate.show_sql">false</prop> <!-- SQL 보기 -->
+                <prop key="hibernate.format_sql">true</prop> <!-- SQL 정렬해서 보기 -->
+                <prop key="hibernate.use_sql_comments">true</prop> <!-- SQL 주석 보기 -->
+                <prop key="hibernate.id.new_generator_mappings">true</prop>	<!-- JPA 표준에 맞게 새로운 키 생성 전략을 사용-->
+            	<prop key="hibernate.hbm2ddl.auto">none</prop> <!-- DDL 설정 none : 기본값 -->
+            </props>
+        </property>
+    </bean>
+
+    <!-- JPA @Repository 탐색 범위-->
+    <jpa:repositories base-package="com.mc.springxml.model.repository"/>
+
+    <!-- JPA 예외를 스프링 예외로 변환 -->
+    <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+</beans>

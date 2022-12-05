@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configuration> 
+<Configuration status="INFO">
+	<!-- Appenders -->
+	<Appenders>
+		<Console name="console" target="SYSTEM_OUT">
+<!-- 			<PatternLayout pattern="%p: %c{1}][%F%L] - %m%n"/> -->
+			<PatternLayout pattern="%p : %l - %m%n"/>
+		</Console>
+	</Appenders> <!-- Application Loggers -->
+	<Loggers>
+		<Logger name="java.sql" level="INFO" additivity="false">
+			<AppenderRef ref="console" />
+		</Logger>
+		<Logger name="egovframework" level="INFO" additivity="false">
+			<AppenderRef ref="console" />
+		</Logger>
+		<Logger name="jdbc.audit" level="WARN" additivity="false">
+			<AppenderRef ref="console" />
+		</Logger>
+		<Logger name="jdbc.resultset" level="WARN" additivity="false">
+			<AppenderRef ref="console" />
+		</Logger>
+		<Logger name="jdbc.splonly" level="DEBUG" additivity="false">
+			<AppenderRef ref="console" />
+		</Logger>
+		<Logger name="jdbc.sqltiming" level="DEBUG" additivity="false">
+			<AppenderRef ref="console" />
+		</Logger>
+		<Logger name="org.springframework" level="DEBUG" additivity="false">
+			<AppenderRef ref="console" />
+		</Logger>
+		<Logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE" additivity="false">
+		    <appenderref ref="console" />
+		</Logger>
+		<Logger name="org.hibernate.SQL" level="DEBUG" additivity="false">
+		    <appenderref ref="console" />
+		</Logger>
+		<Logger name="jdbc.resultsettable" level="INFO" additivity="false">
+			<appender-ref ref="console" />
+		</Logger>
+		<Logger name="com.mc.springxml" level="DEBUG" additivity="false">
+			<appender-ref ref="console" />
+		</Logger>
+		<Logger name="errorLog" level="ERROR" additivity="false">
+			<appender-ref ref="console" />
+		</Logger>
+	</Loggers>
+</Configuration>

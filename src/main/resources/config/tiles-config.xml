@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- ============================================	-->
+    <!-- 							 	관리자 template									-->
+    <!-- ============================================	-->
+    <definition name="admin_default" template="/WEB-INF/tiles/adm/layout.jsp">
+		<put-attribute name="title" value="Proiincar 관리자 시스템"/>
+		<put-attribute name="header" value="/WEB-INF/tiles/adm/header.jsp"/>
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/adm/footer.jsp"/>
+		<put-attribute name="pop" value="/WEB-INF/tiles/adm/pop.jsp"/>
+	</definition>
+	
+    <definition name="admin_login" template="/WEB-INF/tiles/adm/login/layout.jsp">
+		<put-attribute name="title" value="Proiincar 관리자 시스템"/>
+		<put-attribute name="header" value="/WEB-INF/tiles/adm/login/header.jsp"/>
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/adm/footer.jsp"/>
+	</definition>
+	
+	<!-- 관리자 메인 페이지 -->
+	<definition name="/adm/login/*.tiles" extends="admin_login">
+		<put-attribute name="body" value="/WEB-INF/jsp/views/adm/login/{1}.jsp"/>
+	</definition>
+	
+	<!-- ============================================	-->
+    <!-- 						 	국내사용자 template									-->
+    <!-- ============================================	-->
+    <definition name="domestic_default" template="/WEB-INF/tiles/adm/layout.jsp">
+		<put-attribute name="title" value="Proiincar 관리자 시스템"/>
+		<put-attribute name="header" value="/WEB-INF/tiles/adm/header.jsp"/>
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/adm/footer.jsp"/>
+	</definition>
+
+	<!-- 국내사용자 메인 페이지 -->
+	<definition name="user/*.tiles" extends="domestic_default">
+		<put-attribute name="body"   value="/WEB-INF/jsp/views/user/{1}.jsp"/>
+	</definition>
+
+	<!-- ============================================	-->
+    <!-- 						 	무역사 template 									-->
+    <!-- ============================================	-->
+    <definition name="trade_default" template="/WEB-INF/tiles/adm/layout.jsp">
+		<put-attribute name="title" value="Proiincar 관리자 시스템"/>
+		<put-attribute name="header" value="/WEB-INF/tiles/adm/header.jsp"/>
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/adm/footer.jsp"/>
+	</definition>
+
+	<!-- 무역사 메인 페이지 -->
+	<definition name="user/*.tiles" extends="trade_default">
+		<put-attribute name="body"   value="/WEB-INF/jsp/views/user/{1}.jsp"/>
+	</definition>
+    
+	<!-- ============================================	-->
+    <!-- 							프로쉬핑 template 									-->
+    <!-- ============================================	-->
+    <definition name="forward_default" template="/WEB-INF/tiles/adm/layout.jsp">
+		<put-attribute name="title" value="Proiincar 관리자 시스템"/>
+		<put-attribute name="header" value="/WEB-INF/tiles/adm/header.jsp"/>
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/adm/footer.jsp"/>
+	</definition>
+
+	<!-- 프로쉬핑 메인 페이지 -->
+	<definition name="user/*.tiles" extends="forward_default">
+		<put-attribute name="body"   value="/WEB-INF/jsp/views/user/{1}.jsp"/>
+	</definition>
+
+	<!-- ============================================	-->
+    <!-- 						 	프로인카 template	 								-->
+    <!-- ============================================	-->
+    <definition name="trade_admin_default" template="/WEB-INF/tiles/adm/layout.jsp">
+		<put-attribute name="title" value="Proiincar 관리자 시스템"/>
+		<put-attribute name="header" value="/WEB-INF/tiles/adm/header.jsp"/>
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/adm/footer.jsp"/>
+	</definition>
+
+	<!-- 프로인카 메인 페이지 -->
+	<definition name="user/*.tiles" extends="trade_admin_default">
+		<put-attribute name="body"   value="/WEB-INF/jsp/views/user/{1}.jsp"/>
+	</definition>
+
+	<!-- ============================================	-->
+    <!-- 							해외사용자 template 								-->
+    <!-- ============================================	-->
+    <definition name="international_default" template="/WEB-INF/tiles/adm/layout.jsp">
+		<put-attribute name="title" value="Proiincar 관리자 시스템"/>
+		<put-attribute name="header" value="/WEB-INF/tiles/adm/header.jsp"/>
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/adm/footer.jsp"/>
+	</definition>
+
+	<!-- 해외사용자 메인 페이지 -->
+	<definition name="user/*.tiles" extends="international_default">
+		<put-attribute name="body"   value="/WEB-INF/jsp/views/user/{1}.jsp"/>
+	</definition>        
+    
+</tiles-definitions>
