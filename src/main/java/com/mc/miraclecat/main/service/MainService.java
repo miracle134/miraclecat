@@ -1,12 +1,12 @@
 /**
- * ITNES Project
- * Copyright 2019 itnes.co.kr
+ * MiracleCat Project
+ * Copyright 2016 https://github.com/miracle134
  */
 package com.mc.miraclecat.main.service;
 
 /**
  * @author MiracleCat (miraclecat@itnes.co.kr)
- * @Name SampleService.java
+ * @Name MainService.java
  * @Description
  * @Modification Information
  * @
@@ -16,7 +16,7 @@ package com.mc.miraclecat.main.service;
  * @
  * @since 2021. 2. 18.
  */
-public interface SampleService {
+public interface MainService {
 
 //    default SampleVO orderPhone() {
 //        SampleVO phone = new SampleVO();

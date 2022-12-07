@@ -22,4 +22,9 @@
 		<put-attribute name="body" value="/WEB-INF/jsp/views/main/{1}.jsp"/>
 	</definition>
 
+	<!-- Notice 페이지 -->
+	<definition name="notice/*.tiles" extends="default_template">
+		<put-attribute name="body" value="/WEB-INF/jsp/views/notice/{1}.jsp"/>
+	</definition>
+
 </tiles-definitions>

@@ -1,3 +1,7 @@
+/**
+ * MiracleCat Project
+ * Copyright 2016 https://github.com/miracle134
+ */
 package com.mc.miraclecat.member.vo;
 
 import lombok.Data;

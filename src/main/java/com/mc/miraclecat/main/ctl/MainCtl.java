@@ -16,8 +16,8 @@ import java.util.stream.Collectors;
 /**
  * @author MiracleCat
  * @version 1.0
- * @Name SampleCtl.java
- * @Description
+ * @Name MainCtl.java
+ * @Description Main
  * @Modification Information
  * @
  * @
@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
  */
 @Log4j2
 @Controller
-public class SampleCtl {
+public class MainCtl {
 
 //    /** SampleService */
 //    @Resource(name = "sampleService")
@@ -56,7 +56,6 @@ public class SampleCtl {
      */
     @GetMapping(value = "/")
     public String sampleList() throws Exception {
-
 
         return "main/main.tiles";
     }

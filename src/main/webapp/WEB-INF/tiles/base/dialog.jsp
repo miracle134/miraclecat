@@ -37,8 +37,8 @@
 <script src="/js/template/sb-admin-2.min.js"></script>
 
 <!-- Page level plugins -->
-<script src="/js/template/Chart.min.js"></script>
+<%--<script src="/js/template/Chart.min.js"></script>--%>
 
 <!-- Page level custom scripts -->
-<script src="/js/template/chart-area-demo.js"></script>
-<script src="/js/template/chart-pie-demo.js"></script>
+<%--<script src="/js/template/chart-area-demo.js"></script>--%>
+<%--<script src="/js/template/chart-pie-demo.js"></script>--%>

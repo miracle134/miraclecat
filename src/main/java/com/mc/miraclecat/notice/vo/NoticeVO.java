@@ -1,34 +1,29 @@
 /**
-  * ITNES Project
-  * Copyright 2019 itnes.co.kr
-  */
-package com.mc.miraclecat.main.vo;
-
-import org.apache.ibatis.type.Alias;
+ * MiracleCat Project
+ * Copyright 2016 https://github.com/miracle134
+ */
+package com.mc.miraclecat.notice.vo;
 
 import com.mc.miraclecat.utils.CommonParameter;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
- 
+import org.apache.ibatis.type.Alias;
+
 /**
- * @Name SamplePVO.java
- * @Description  
- *
- * @Modification Information
- * @
- * @
- * @ 수정일      수정자            수정내용
- * @ -------   -----------   ---------------
- * @
- * @author MiracleCat (miraclecat@itnes.co.kr)
- * @since 2021. 2. 23.
- * @version 1.0
+ * packageName    : com.mc.miraclecat.notice.vo
+ * fileName       : NoticeVO
+ * author         : MiracleCat
+ * date           : 2022-12-06
+ * description    :
+ * ===========================================================
+ * DATE              AUTHOR             NOTE
+ * -----------------------------------------------------------
+ * 2022-12-06        MiracleCat       최초 생성
  */
 @Data
 @EqualsAndHashCode(callSuper=false)
-@Alias("sampleVO")
-public class SampleVO extends CommonParameter{
+@Alias("noticeVO")
+public class NoticeVO extends CommonParameter{
 	
 	/**************** Parameter *****************/
 	

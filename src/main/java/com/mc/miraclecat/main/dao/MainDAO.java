@@ -1,7 +1,7 @@
 /**
-  * ITNES Project
-  * Copyright 2019 itnes.co.kr
-  */
+ * MiracleCat Project
+ * Copyright 2016 https://github.com/miracle134
+ */
 package com.mc.miraclecat.main.dao;
 
 import java.util.List;
@@ -9,10 +9,10 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.mc.miraclecat.model.entity.Sample;
-import com.mc.miraclecat.main.vo.SampleVO;
+import com.mc.miraclecat.main.vo.MainVO;
 
 /**
- * @Name SampleDAO.java
+ * @Name MainDAO.java
  * @Description  
  *
  * @Modification Information
@@ -24,8 +24,8 @@ import com.mc.miraclecat.main.vo.SampleVO;
  * @ ----------   ---------------   ---------------
  * @
  */
-@Repository("sampleDAO")
-public interface SampleDAO{
+@Repository("mainDAO")
+public interface MainDAO {
 	
 
 	/**
@@ -36,6 +36,6 @@ public interface SampleDAO{
 	 * @return
 	 * @throws Exception
 	 */ 	
-	public List<Sample> selectMybatisDB1(SampleVO vo) throws Exception;
+	public List<Sample> selectMybatisDB1(MainVO vo) throws Exception;
 	
 }

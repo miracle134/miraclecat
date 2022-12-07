@@ -25,3 +25,7 @@ public interface SampleRepository{
 //	Sample findBySeqAndName(Long seq, String name);
 //
 }
+
+
+
+

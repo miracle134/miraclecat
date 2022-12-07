@@ -1,16 +1,16 @@
 /**
-  * ITNES Project
-  * Copyright 2019 itnes.co.kr
-  */
+ * MiracleCat Project
+ * Copyright 2016 https://github.com/miracle134
+ */
 package com.mc.miraclecat.main.service.impl;
 
 import org.springframework.stereotype.Service;
 
-import com.mc.miraclecat.main.service.SampleService;
+import com.mc.miraclecat.main.service.MainService;
 
 
 /**
- * @Name SampleServiceImpl.java
+ * @Name MainServiceImpl.java
  * @Description  
  *
  * @Modification Information
@@ -22,8 +22,8 @@ import com.mc.miraclecat.main.service.SampleService;
  * @ ----------   ---------------   ---------------
  * @
  */
-@Service(value="sampleService")
-public class SampleServiceImpl implements SampleService{
+@Service(value="mainService")
+public class MainServiceImpl implements MainService {
 	
 //	/** SampleDAO */
 //    @Autowired

@@ -5,8 +5,8 @@
   Time: 오후 2:34
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
+<%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -16,30 +16,30 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title><tiles:getAsString name="title"/></title>
-    <%@include file="/include/base/common/public_script.jsp"%>
+    <%@ include file="/include/base/common/public_script.jsp" %>
 </head>
 <body>
-    <div id="wrapper">
+<div id="wrapper">
 
-        <!-- header -->
-        <tiles:insertAttribute name="header" />
+    <!-- header -->
+    <tiles:insertAttribute name="header"/>
 
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
 
-            <div id="content">
-                <!-- top -->
-                <tiles:insertAttribute name="top" />
-                <!-- body -->
-                <tiles:insertAttribute name="body" />
-            </div>
-            <!-- footer -->
-            <tiles:insertAttribute name="footer" />
+        <div id="content">
+            <!-- top -->
+            <tiles:insertAttribute name="top"/>
+            <!-- body -->
+            <tiles:insertAttribute name="body"/>
         </div>
-
-        <!-- Dialog -->
-        <tiles:insertAttribute name="dialog" />
-
+        <!-- footer -->
+        <tiles:insertAttribute name="footer"/>
     </div>
+
+    <!-- Dialog -->
+    <tiles:insertAttribute name="dialog"/>
+
+</div>
 </body>
 </html>

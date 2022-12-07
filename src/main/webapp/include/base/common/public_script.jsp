@@ -16,8 +16,9 @@
 <script src="/js/template/bootstrap.bundle.min.js"></script>
 
 <!-- Common -->
-<script src="/js/common/common-plugin.js"></script>
-<script src="/js/common/common-script.js"></script>
+<%@ include file="/include/base/common/public_static.jsp" %>
+<script type="text/javascript" src="/js/common/common-plugin.js?t=${cacheNum}"></script>
+<script type="text/javascript" src="/js/common/common-script.js?t=${cacheNum}"></script>
 <!-- ================== END BASE JS ================== -->
 
 <!-- 초기 선언 함수 -->
